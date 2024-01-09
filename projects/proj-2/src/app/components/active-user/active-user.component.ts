@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-// import { UsersService } from '../../services/user.services';
+import { UserService } from 'projects/proj-2/services/user.service';
+
 
 @Component({
   selector: 'app-active-user',
@@ -7,8 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./active-user.component.scss']
 })
 export class ActiveUsersComponent {
-  // UserService: any;
-  onclick(){
-    alert("Set to Inactive");
+
+  constructor(public userService: UserService) {}
+
+  toggleStatus(username: string) {
+    this.userService.toggleUserStatus(username);
   }
+
 }
+
+

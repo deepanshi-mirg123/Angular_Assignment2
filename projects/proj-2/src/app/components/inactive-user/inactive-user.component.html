@@ -1,11 +1,10 @@
+<p><b>Inactive Users</b></p>
+    <div class="Inactive">
+      <ul>
+        <li *ngFor="let user of userService.inactiveUsers">{{ user }}
+          <br>
+          <button class="btn btn-success" (click)="toggleStatus(user)">Set to Active</button>
+        </li>
+      </ul>
+    </div>
 
-<p>Inactive Users</p>
-<div class ="Inactive">
-
-<ul>
-    <li>Chris  </li>
-    <button class="btn btn-success" (click)="onclick">Set to Active</button>
-    <li>Max </li>
-    <button class="btn btn-success" (click)="onclick">Set to Active</button>
-</ul>
-</div> 
